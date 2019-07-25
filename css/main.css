@@ -1,0 +1,99 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.menu {
+  cursor: pointer;
+}
+.menu:hover .menu__bar:first-child {
+  width: 20px;
+}
+.menu:hover .menu__bar:nth-child(2) {
+  width: 30px;
+}
+.menu:hover .menu__bar:nth-child(3) {
+  width: 40px;
+}
+
+.menu__top {
+  background: #e4e4e4;
+  padding: 50px 0;
+  position: relative;
+}
+
+.menu__bars {
+  margin: 0 auto;
+  text-align: center;
+  width: 50px;
+  position: initial;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.menu__bar {
+  -webkit-transition: width 0.5s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 0.5s;
+  height: 2px;
+  background: black;
+  display: block;
+  margin-top: 7px;
+  width: 50px;
+}
+
+.menu__bottom {
+  background: #e4e4e4;
+  height: 100vh;
+  position: absolute;
+  width: 98%;
+  top: -100%;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  border-bottom-right-radius: 150px;
+  margin-top: -9px;
+  margin-right: 18px;
+  padding-top: 25px;
+}
+
+.menu__bottom__item {
+  font-size: 25px;
+  font-weight: 100;
+  opacity: 0.3;
+  transition: 0.3s linear;
+}
+.menu__bottom__item:hover {
+  opacity: 1;
+}
+
+.close {
+  transition: 0.2s linear;
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  right: 50%;
+  top: -50%;
+  transform: translate(-50%, -50%);
+}
+.close:hover {
+  opacity: 1 !important;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 23px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
